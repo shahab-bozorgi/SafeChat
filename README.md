@@ -1,7 +1,6 @@
 # SafeChat – Fast & Secure Messaging App
 
 ![SafeChat](https://img.shields.io/badge/Status-Development-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 SafeChat is a real-time messaging application that enables **private and group chats** with **end-to-end encryption (E2EE)** for maximum privacy. Built with **WebSocket, Redis, and PostgreSQL**, it ensures fast, secure, and scalable communication.
 
