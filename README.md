@@ -1,20 +1,25 @@
-SafeChat – Fast & Secure Messaging App
+# SafeChat – Fast & Secure Messaging App
 
-SafeChat is a real-time messaging platform that enables private and group chats with end-to-end encryption (E2EE) for maximum privacy. Built with WebSocket, Redis, and PostgreSQL, it ensures fast and scalable communication.
-🚀 Features
+![SafeChat](https://img.shields.io/badge/Status-Development-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-✅ One-on-one & group messaging with text, voice, images, and file sharing
-✅ Real-time communication with WebSocket (sent, delivered, read status)
-✅ End-to-end encryption (E2EE) using AES-256 + RSA for privacy
-✅ Optimized message storage with PostgreSQL + Redis
-✅ Secure authentication with JWT + 2FA
-✅ Instant notifications for unread messages
-🔧 Tech Stack
+SafeChat is a real-time messaging application that enables **private and group chats** with **end-to-end encryption (E2EE)** for maximum privacy. Built with **WebSocket, Redis, and PostgreSQL**, it ensures fast, secure, and scalable communication.
 
-    Backend: Golang (Gin) / Django (DRF)
+## 🚀 Features
 
-    Database: PostgreSQL + Redis
+✅ **One-on-one & group messaging** (text, voice, images, and file sharing)  
+✅ **Real-time communication** via **WebSocket** (sent, delivered, read receipts)  
+✅ **End-to-end encryption (E2EE)** using **AES-256 + RSA** for privacy  
+✅ **Optimized message storage** with **PostgreSQL + Redis**  
+✅ **Secure authentication** with **JWT + 2FA**  
+✅ **Instant notifications** for unread messages  
 
-    Realtime: WebSocket (Socket.io / Gorilla WebSocket)
+---
 
-🔹 Secure. Fast. Reliable. 🚀
+## 🛠 Tech Stack
+
+- **Backend:** Golang (Gin) / Django (DRF)
+- **Database:** PostgreSQL + Redis
+- **Real-time:** WebSocket (Socket.io / Gorilla WebSocket)
+- **Authentication:** JWT + Two-Factor Authentication (2FA)
+- **Storage:** S3 / Cloudinary for media files
