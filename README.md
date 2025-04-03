@@ -17,7 +17,7 @@ SafeChat is a real-time messaging application that enables **private and group c
 
 ## 🛠 Tech Stack
 
-- **Backend:** Golang (Gin) / Django (DRF)
+- **Backend:** Django (DRF)
 - **Database:** PostgreSQL + Redis
 - **Real-time:** WebSocket (Socket.io / Gorilla WebSocket)
 - **Authentication:** JWT + Two-Factor Authentication (2FA)
