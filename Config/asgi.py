@@ -3,20 +3,19 @@ from django.core.asgi import get_asgi_application
 from channels.routing import ProtocolTypeRouter, URLRouter
 from channels.auth import AuthMiddlewareStack
 from django.urls import path
-from Messages import consumers  # مصرف‌کننده شما در برنامه 'Messages' است
 
+from Chat.routing import websocket_urlpatterns
+
+# این خط باید تنظیمات پروژه شما را بارگذاری کند
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Config.settings')
 
+django_asgi_app = get_asgi_application()
 
 application = ProtocolTypeRouter({
-    "http": get_asgi_application(),
+    "http": django_asgi_app,
     "websocket": AuthMiddlewareStack(
         URLRouter(
-            [
-                path('ws/chat/', consumers.ChatConsumer.as_asgi()),  # مسیر WebSocket
-            ]
+            websocket_urlpatterns
         )
     ),
 })
-
-#c

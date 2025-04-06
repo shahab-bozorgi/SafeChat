@@ -30,7 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('users/', include('Accounts.urls')),
-    path('chat/', include('Messages.urls')),
+    path('Chat/', include('Chat.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path(
         'api/swagger/',

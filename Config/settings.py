@@ -42,13 +42,13 @@ INSTALLED_APPS = [
 
     #Apps
     'Accounts.apps.AccountsConfig',
-    'Messages.apps.MessagesConfig',
-
+    'Chat.apps.ChatConfig',
     #packages
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
     'channels',
+    'daphne',
 ]
 
 MIDDLEWARE = [
@@ -166,10 +166,11 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],  # تنظیمات Redis
+            "hosts": [('127.0.0.1', 6379)],
         },
     },
 }
+
 
 
 # Default primary key field type
@@ -178,4 +179,3 @@ CHANNEL_LAYERS = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'Accounts.User'
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
