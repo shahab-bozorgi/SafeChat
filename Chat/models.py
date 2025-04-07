@@ -3,6 +3,7 @@ from Accounts.models import User
 
 
 class Room(models.Model):
+    host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=255, null=False, blank=False, unique=True)
     current_users = models.ManyToManyField(User, related_name="current_rooms", blank=True)
 

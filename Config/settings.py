@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'drf_spectacular',
     'channels',
-    'daphne',
+    # 'daphne',
 ]
 
 MIDDLEWARE = [
@@ -163,13 +163,11 @@ MEDIA_ROOT = BASE_DIR / "media"
 #ASGI
 ASGI_APPLICATION = 'Config.asgi.application'
 CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
-        },
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
     },
 }
+
 
 
 
